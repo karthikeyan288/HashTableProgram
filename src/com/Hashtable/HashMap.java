@@ -19,20 +19,25 @@ public class HashMap<K, V> {
 		
 	}
 	
+	public void remove(K key) {
+		int indexNumber = this.getBucketNumber(key);
+		MyLinkedList<K> linkedList = arrayList.get(indexNumber);
+		if (linkedList == null) {
+			return;
+		}
+		MyMapNode<K, V> mapNode = (MyMapNode<K, V>) linkedList.deleteNode(key);
+	}
+	
+	public V get(K key) {
+		MyMapNode<K, V> myNode = (MyMapNode<K, V>) this.myLinkedList.search(key); 
+		return (myNode == null)?null: myNode.getValue();
+	}
+	
 
 	@Override
 	public String toString() {
 		return "HashMap [myLinkedList=" + myLinkedList + "]";
-	}
-
-	public void remove(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
+	}	
 
 }
 
