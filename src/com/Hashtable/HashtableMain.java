@@ -48,15 +48,12 @@ public class HashtableMain {
 		case 1:
 			hash.freqencyOfWords();
 			break;
-			
 		case 2:
 			hash.removeWord();
 			break;
-	
 		default:
 			System.out.println("enter valid key");
 			break;
-		}
-		
+		}	
 	}
 }

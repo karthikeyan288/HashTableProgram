@@ -28,12 +28,12 @@ public class HashMap<K, V> {
 		MyMapNode<K, V> mapNode = (MyMapNode<K, V>) linkedList.deleteNode(key);
 	}
 	
+
 	public V get(K key) {
 		MyMapNode<K, V> myNode = (MyMapNode<K, V>) this.myLinkedList.search(key); 
 		return (myNode == null)?null: myNode.getValue();
 	}
 	
-
 	@Override
 	public String toString() {
 		return "HashMap [myLinkedList=" + myLinkedList + "]";
