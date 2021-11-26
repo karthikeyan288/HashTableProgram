@@ -33,19 +33,11 @@ public class HashMap<K, V> {
 		return (myNode == null)?null: myNode.getValue();
 	}
 	
+
 	@Override
 	public String toString() {
 		return "HashMap [myLinkedList=" + myLinkedList + "]";
-	}
-
-	public void remove(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
+	}	
 
 }
 
